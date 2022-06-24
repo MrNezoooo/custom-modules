@@ -1,0 +1,11 @@
+name: 'Module Articles'
+type: module
+description: 'Custom block'
+core_version_requirement: ^8 || ^9
+package: custom
+version: 1.0
+
+dependencies:
+  - drupal:block
+  - drupal:node
+  - drupal:path

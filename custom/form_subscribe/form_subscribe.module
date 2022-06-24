@@ -1,0 +1,19 @@
+<?php
+
+
+function form_subscribe_user_insert(&$edit, $account, $category){
+  if (array_key_exists('subscribe', $account)) {
+    $is_uni = FALSE;
+    if ($account->profile_club['field_uni_club']['und'][0]['value'] == 1 ) {
+      $is_uni = TRUE;
+    }
+    if ($is_uni) {
+      $uid = $account->uid;
+      $role_name = 'uni_club';
+      if ($role = user_role_load_by_name($role_name)) {
+        user_multiple_role_edit(array($uid), 'add_role', $role->rid);
+      }
+    }
+  }
+}
+?>

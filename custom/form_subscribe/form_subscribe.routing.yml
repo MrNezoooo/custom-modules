@@ -1,0 +1,7 @@
+#form_subscribe.hello_form:
+#  path: '/subscribe/helloform'
+#  defaults:
+#    _form: 'Drupal\form_subscribe\Form\SubscribeForm'
+#    _title: 'Simple custom form example'
+#  requirements:
+#    _permission: 'access content'
